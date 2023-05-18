@@ -1,0 +1,22 @@
+CREATE TABLE emp (
+  emp_name VARCHAR(50),
+  emp_salary DECIMAL(10,2)
+);
+INSERT INTO emp (emp_name, emp_salary) VALUES
+('Yash Srivastava', 50000.00),
+('Satyam verma', 60000.50),
+('Siddhant', 75000.75),
+('Mayank', 45000.25),
+('Dr Dead', 80000.00);
+
+//query to find the 2nd highest salary from this table
+SELECT emp_salary
+FROM emp
+ORDER BY emp_salary DESC
+LIMIT 1 OFFSET 1;
+
+//query to find 2nd lowest salary 
+SELECT emp_salary
+FROM emp
+ORDER BY emp_salary ASC
+LIMIT 1 OFFSET 1;
